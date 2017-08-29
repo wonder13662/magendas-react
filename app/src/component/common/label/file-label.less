@@ -1,0 +1,46 @@
+@ultraLightGray: #eee;
+@lightGray: #ddd;
+@white: #fff;
+@deepBlueSky: #03a9f4;
+
+.swv-file-label {
+    padding: 6px;
+    border: 1px solid @ultraLightGray;
+    border-radius: 4px;
+    background-color: @ultraLightGray;
+    font-size: 14px;
+    white-space: nowrap;
+    vertical-align: middle;
+    i {
+        vertical-align: middle;
+        cursor: pointer;
+    }
+    a.icon-remove {
+        position: relative;
+        padding-right: 5px;
+    }
+    a.icon-remove > i {
+        position: relative;
+        top: -1px;
+    }
+    a.icon-download {
+        position: relative;
+        padding-right: 5px;
+    }
+    .icon-container {
+        display: inline-block;
+        padding: 3px 6px;
+        border: 1px solid @ultraLightGray;
+        border-radius: 4px;
+        background-color: @ultraLightGray;
+        vertical-align: middle;
+        text-decoration: none;
+    }
+    .icon-container:hover {
+        color: @deepBlueSky;
+        background-color: @white;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+    }
+}

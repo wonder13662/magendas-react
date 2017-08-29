@@ -1,0 +1,104 @@
+@import 'colors';
+
+@checkboxBorderColor:#ccc;
+
+.swv-checkbox {
+	font-family:"lato";
+	color:@swingvyBlueAlpha70;
+	input[type=checkbox].input-c
+	{
+		display:none;
+	}
+	input[type=checkbox].input-c + label
+	{
+		background-color: #fff;
+		padding: 7px;
+		display:inline-block;
+		border:1px solid @checkboxBorderColor;
+		cursor: pointer;
+		float: left;
+		margin-right: 7px;
+		margin-top: 2px;
+		position: relative;
+	}
+	input[type=checkbox].input-c:checked + label
+	{
+		background-color: @swingvyBlue;
+		color:white;
+	}
+	input[type=checkbox].input-c + label > span
+	{
+		display:none;
+		position: absolute;
+		top:2px;
+		left:2px;
+		font-size: 10px;
+	}
+	input[type=checkbox].input-c + label > span.on-mouse-over-label
+	{
+		display:inline-block;
+		opacity:.3;
+	}
+	input[type=checkbox].input-c:checked + label > span.on-mouse-over-label
+	{
+		display:inline-block;
+		color:white;
+		opacity:1;
+	}
+	input[type=checkbox].input-c + label:hover > span
+	{
+		display:inline-block;
+		opacity:.3;
+	}
+	input[type=checkbox].input-c:checked + label > span
+	{
+		display:inline-block;
+		opacity:1;
+	}
+	input[type=checkbox].input-c:checked + label:hover > span {
+		display:inline-block;
+		opacity:1;
+	}
+	.swv-checkbox-field {
+		color:#333;
+	}
+	.swv-checkbox-field:hover {
+		cursor: pointer;
+	}
+
+	&.disabled {
+		input[type=checkbox].input-c + label,label:hover {
+			cursor: not-allowed;
+			border:1px solid @checkboxBorderColor;
+			background-color: @accentDisabledColorAlpha50;
+		}
+		input[type=checkbox].input-c + label:hover > span {
+			display:none;
+		}
+		input[type=checkbox].input-c:checked + label:hover > span {
+			display:inline-block;
+			color: @accentDisabledCursorColor;
+		}
+		input[type=checkbox].input-c:checked + label,label:hover {
+			background-color: @accentDisabledColorAlpha50;
+			color: @accentDisabledCursorColor;
+		}
+		input[type=checkbox].input-c + label > span.on-mouse-over-label
+		{
+			display:none;
+		}
+		span.swv-checkbox-field:hover {
+			cursor: not-allowed;
+		}
+
+	}
+
+	&.swv-checkbox-inline {
+		display:inline-block;
+	}
+	.swv-ellipsis {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

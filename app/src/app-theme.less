@@ -1,0 +1,49 @@
+@import 'colors';
+
+html {
+    body {
+		position: relative;
+        /*
+          Roboto는 Account에서 사용
+          Lato는 Main에서 사용
+          TODO : Light/Regular/Bold 구분 필요.
+        */
+        .font-roboto-light {
+            font-family: 'Roboto';
+            font-weight: 300;
+        }
+        .font-roboto {
+            font-family: 'Roboto';
+            font-weight: 400;
+        }
+        .font-lato-light {
+            font-family: 'Lato';
+            font-weight: 300;
+        }
+        .font-lato {
+            font-family: 'Lato';
+            font-weight: 400;
+        }
+        .font-lato-bold {
+            font-family: 'Lato';
+            font-weight: 700;
+        }
+
+		#appContainer { }
+
+		#loadingScreenContainer {
+			.loading-screen {
+				position: absolute;
+				width: 100%;
+				min-height: 100vh;
+				background-color: rgba(255,255,255,.8);
+				.swv-loader {
+					position: absolute;
+					top:50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+    }
+}

@@ -1,0 +1,31 @@
+@import 'colors';
+
+
+.tooltip.swv-tooltip {
+	& > .tooltip-inner {
+		background-color:@swingvyBlue;
+		text-align: left;
+		max-width: 400px;
+	}
+	&.right > .tooltip-arrow {
+		border-right-color:@swingvyBlue;
+	}
+	&.left > .tooltip-arrow {
+		border-left-color: @swingvyBlue;
+	}
+	&.top > .tooltip-arrow {
+		border-top-color: @swingvyBlue;
+	}
+	&.bottom > .tooltip-arrow {
+		border-bottom-color: @swingvyBlue;
+	}
+}
+
+.tooltip.swv-tooltip.swv-panel-layout > .tooltip-inner {
+	background-color:@swingvyBlue;
+	text-align: left;
+	max-width: 400px;
+}
+.tooltip.swv-tooltip.swv-panel-layout > .tooltip-arrow {
+	border-right-color:@swingvyBlue;
+}

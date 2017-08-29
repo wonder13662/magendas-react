@@ -1,0 +1,39 @@
+@import 'colors';
+
+@fontSmall:12px;
+
+.swv-days-input {
+	.swv-days-dual-tail {
+		position: absolute;
+		z-index: 100;
+		right: 5px;
+		top: 8px;
+		color: @gray;
+		text-align: left;
+		width: 23px;
+	}
+	div.input-group > input.form-control.swv-days-dual-input {
+		text-align: right;
+		padding: 10px 30px 10px 10px;
+		border-radius: 0px 5px 5px 0px;
+	}
+	&.form-group {
+		margin-bottom: 0px;
+	}
+	input.parsley-error {
+		border-radius: 0 4px 4px 0!important;
+	}
+	div.input-group-addon.swv-days-input-small {
+		font-size:@fontSmall;
+		padding: 6px 8px;
+	}
+	input.swv-days-input-small {
+		font-size:@fontSmall;
+		height:30px;
+		padding: 6px;
+	}
+	ul.parsley-errors-list {
+		position: absolute;
+		bottom: -16px;
+	}
+}

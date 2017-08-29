@@ -1,0 +1,18 @@
+@import "colors";
+@import "images";
+
+.home-content-container {
+	height: 100%;
+	position: relative;
+	& > .container {
+		padding-top: 30px;
+		padding-bottom: 120px;
+		position: relative;
+		@media (max-width: 768px) {
+			width: 750px;
+		}
+	}
+	.loading-spinner-box {
+		padding: 50px;
+	}
+}

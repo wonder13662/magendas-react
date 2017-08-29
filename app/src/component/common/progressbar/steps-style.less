@@ -1,0 +1,95 @@
+@stepNormalColor: #7d7d7d;
+@stepActiveColor: #55b776;
+@stepOngoingColor: #55b776;
+.swv-steps-progressbar-container {
+    width: 100%;
+    margin: 10px 0px 10px -20px;
+    .progressbar {
+        counter-reset: step;
+        li {
+            list-style-type: none;
+            width: 25%;
+            float: left;
+            font-size: 12px;
+            position: relative;
+            text-align: center;
+            text-transform: uppercase;
+            color: @stepNormalColor;
+			z-index: 10;
+        }
+
+        li.finish:before {
+            width: 32px;
+            height: 32px;
+            top: -1px;
+            content: "\f00c";
+            color: white;
+            font-family: FontAwesome;
+            font-style: normal;
+            font-weight: normal;
+            text-decoration: inherit;
+            line-height: 30px;
+            border: 2px solid @stepActiveColor;
+            display: block;
+            text-align: center;
+            margin: 0 auto 10px auto;
+            border-radius: 50%;
+            background-color: @stepActiveColor;
+        }
+        li.finish {
+            color: @stepActiveColor;
+        }
+        li.finish:after {
+            background-color: @stepActiveColor;
+        }
+
+        li.ongoing:before {
+            width: 32px;
+            height: 32px;
+            top: -1px;
+            content: counter(step);
+            counter-increment: step;
+            line-height: 30px;
+            border: 2px solid @stepOngoingColor;
+            display: block;
+            text-align: center;
+            margin: 0 auto 10px auto;
+            border-radius: 50%;
+            background-color: white;
+        }
+        li.ongoing {
+            color: @stepOngoingColor;
+        }
+        li.ongoing:after {
+            background-color: @stepOngoingColor;
+        }
+
+        li:before {
+            width: 32px;
+            height: 32px;
+            top: -1px;
+            content: counter(step);
+            counter-increment: step;
+            line-height: 30px;
+            border: 2px solid #7d7d7d;
+            display: block;
+            text-align: center;
+            margin: 0 auto 10px auto;
+            border-radius: 50%;
+            background-color: white;
+        }
+        li:after {
+            width: 100%;
+            height: 2px;
+            content: '';
+            position: absolute;
+            background-color: #7d7d7d;
+            top: 15px;
+            left: calc(~'-50% + 16px');
+            z-index: -1;
+        }
+        li:first-child:after {
+            content: none;
+        }
+    }
+}
