@@ -4,6 +4,7 @@ import TextUtil from 'Util/TextUtil';
 import DataCache from 'Network/DataCache';
 import RequestErrorHandler from 'Network/RequestErrorHandler';
 import { updateApiRequestedTime } from 'Action/account';
+import Promise from 'promise';
 
 let dataCache = new DataCache();
 let reduxStore = null;
