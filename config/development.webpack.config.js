@@ -150,9 +150,14 @@ module.exports = function(env) {
 				chunks: ['vendor']
 			}),
 			new webpack.ProvidePlugin({
-				$: 'jquery',
-				jQuery: 'jquery',
-                i18next: 'i18next',
+                $: 'jquery',
+                jQuery: 'jquery',
+                'window.jQuery': 'jquery',
+                Popper: ['popper.js', 'default'],
+                // In case you imported plugins individually, you must also require them here:
+                Util: "exports-loader?Util!bootstrap/js/dist/util",
+                Dropdown: "exports-loader?Dropdown!bootstrap/js/dist/dropdown",
+				i18next: 'i18next',
 			}),
             // bundle file들을 html 문서안에 연결해주는 플러그인
 			new htmlWebpackPlugin({

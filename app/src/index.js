@@ -3,7 +3,7 @@ import RES_STORE_KO from 'Asset/locale/ko.json';
 import RES_STORE_EN_US from 'Asset/locale/en-US.json';
 
 //styles
-import 'style-loader!bootstrap/dist/css/bootstrap.css';
+import 'style-loader!bootstrap/dist/css/bootstrap.min.css';
 import 'style-loader!font-awesome/less/font-awesome.less';
 import 'style-loader!parsleyjs/src/parsley.css';
 import 'style-loader!./app-theme.less';
@@ -107,7 +107,7 @@ i18next.init({
 	//session 호출
     DataProvider(API.SESSION)
 		.hideErrorModal()
-		// .request()
+		// .request() // wonder.jung
         .requestMock(() => {
     		return {
                 success:true,
@@ -115,9 +115,6 @@ i18next.init({
 			};
 		})
 		.then(result => {
-
-			console.log('src/index.js / result : ',result);
-
 			ReactDOM.render(<LoadingScreen hide={true}/>, loadingScreenContainer);
 			//앱 렌더링
             ReactDOM.render(

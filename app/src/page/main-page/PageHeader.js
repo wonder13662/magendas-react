@@ -26,7 +26,6 @@ class PageHeader extends Component {
 				<div className="container header-container">
 					<div className="brand-container">
 						<Link to={RoutePath.MAIN.HOME} className="navbar-brand app-logo">HOME</Link>
-						<label className="beta-tag">payroll beta</label>
 					</div>
 					<div className="menu-container">
 						<ul className="nav navbar-nav">

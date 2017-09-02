@@ -108,7 +108,7 @@ class DataProvider {
 
     // @ Desc : Test를 위한 Mock 데이터를 돌려줍니다.
     requestMock(callbackMock) {
-        this.request(true, callbackMock);
+        return this.request(true, callbackMock);
     }
 
     request(isMock, callbackMock) {
